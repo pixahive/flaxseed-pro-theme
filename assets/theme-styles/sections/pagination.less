@@ -1,0 +1,68 @@
+/* --------------- pagination ------------ */
+.pagination {
+  margin: 20px 0;
+  padding-top: 5px;
+  text-align: center;
+  width: 100%;
+  clear: both;
+  margin-top: 0;
+  .nav-links {
+    text-align: center;
+  }
+}
+.pagination .page-numbers {
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  border-radius: 1px;
+  margin-right: 5px;
+  background-color: @background;
+  border: 1px solid fade(@content,50%);
+  display: inline-block;
+  color: @content;
+  font-weight: lighter;
+  .transition(0.4s all ease);
+  margin-bottom: 5px;
+  &:hover {
+    background: darken(@background, 9%);
+    color: @content;
+  }
+
+}
+.pagination {
+  .current, .dots {
+    background: darken(@background, 15%);
+    color: @content;
+    pointer-events: none;
+  }
+  .dots {
+	  background: @background;
+  }
+}
+
+.infinite-scroll .pagination {
+	display: none !important;
+}
+
+#main #infinite-handle {
+	text-align: center;
+	span {
+		background: none;
+	}
+	span button {
+		box-shadow: none;
+		text-shadow: none;
+		background: linear-gradient(to right, darken(@accent, 20%), @accent);
+		padding: 6px 12px;
+		color: white;
+		text-transform: uppercase;
+		transition: 0.4s all ease;
+		letter-spacing: 1px;
+		text-shadow: 1px 0px fade(black, 10%);
+		&:hover {
+			background: linear-gradient(to right, lighten(@accent, 10%), lighten(@accent,5%));
+			padding: 6px 12px;
+			color: white;
+		}
+	}
+}

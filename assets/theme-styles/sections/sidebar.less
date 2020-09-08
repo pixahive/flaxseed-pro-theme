@@ -1,0 +1,210 @@
+#secondary {
+	padding-right: 20px;	
+		
+	aside {
+   	 	padding: 10px;
+  	}
+  	@media screen and (max-width: 767px) {
+		padding-top: 20px;
+		margin-top: 30px;
+		padding-left: 15px;
+	}
+  /*
+aside:nth-child(odd) {
+      background: #fafafa;
+      border: solid 1px #eee;
+  }
+*/
+  .widget-title {
+    font-weight: bold;
+    color: darken(@content, 10%);;
+    font-size: 17px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    word-break: break-all;
+    display: inline-block;
+    clear: both;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    border-bottom: solid 2px darken(@content, 10%);
+   }
+  .widget {
+    a {
+      color: #555;
+      font-weight: normal;
+      .transition( 0.4s all ease );
+      &:hover {
+        color: @accent;
+      }
+    }
+    ul {
+      font-size: 14px;
+      margin-left: 0px;
+      li {
+        list-style: none;
+        border-bottom: solid 1px #eee;
+        padding: 6px;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .widget_search {
+    margin-bottom: 20px;
+    label {
+      width: 100%;
+    }
+    input[type=search] {
+      background: white;
+      border: solid 2px @sbg;
+      border-radius: 0px;
+      padding: 15px;
+      font-size: 16px;
+      padding-bottom: 10px;
+      outline: none;
+      width: 90%;
+      &:focus {
+	      outline: solid 1px @accent;
+      }
+    }
+  }
+  .search-submit {
+    display: none;
+  }
+  /* Some Styling for Default WordPress Widgets */
+  .widget_recent_entries, .widget_recent_comments, .widget_categories, .widget_pages, .widget_archive, .widget_meta, .widget_nav_menu {
+    ul li:before {
+      content: "\f054";
+      font-family: "FontAwesome";
+      color: lighten(@content,10%);
+      font-size: 14px;
+      margin-right: 5px;
+      .transition( 0.4s all ease );
+      display: inline-block;
+
+    }
+    ul li {
+      .transition( 0.4s all ease );
+    }
+    ul li:hover:before {
+      .transform(rotate(-360deg));
+    }
+  }
+  .widget_tag_cloud {
+    .tagcloud a {
+      border: solid 1px @accent;;
+      font-size: 14px !important;
+      text-transform: uppercase;
+      font-weight: normal;
+      color: @accent;
+      padding: 7px 5px;
+      margin-bottom: 5px;
+      display: inline-block;
+      &:hover {
+
+      }
+    }
+  }
+  /* Pulse Grow */
+  @-webkit-keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes hvr-pulse-grow {
+    to {
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+  }
+
+  .tagcloud a {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .tagcloud a:hover, .tagcloud a:focus, .tagcloud a:active {
+    -webkit-animation-name: hvr-pulse-grow;
+    animation-name: hvr-pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+  .textwidget {
+	  padding: 5px;
+  }
+  .widget_satrah_rp {
+    li.rp-item {
+      overflow: auto;
+      clear: both;
+      display: block;
+      padding: 8px 0px;
+      font-size: 14px;
+    }
+    .rp-thumb {
+      width: 62px;
+      float: left;
+      display: inline-block;
+      margin-right: 6px;
+      img {
+        border-right: solid 2px @accent;
+      }
+    }
+    .rp-date {
+      color: lighten(@accent,10%);
+      font-size: 11px;
+      margin-top: 3px;
+
+    }
+  }
+}
+
+#sidebar-posts {
+	margin-top: 20px;
+	.thumb {
+		position: relative;
+		margin-bottom: 10px;
+		&:after {
+			content: "";
+			height: 4px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(to right,darken(#e0c3fc,3%) ,#1de9b6);
+		}
+		&:hover {
+			.title {
+				color: @accent;
+			}
+		}
+	}
+	
+	.title {
+		color: darken(@content,10%);
+		font-weight: bold;
+		font-size: 17px;
+		margin-bottom: 26px;
+		transition: 0.4s all ease;
+		&:hover {
+			color: @accent;
+		}
+	}
+	
+}

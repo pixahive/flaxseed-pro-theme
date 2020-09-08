@@ -1,0 +1,191 @@
+/* -------- Nav Menu ---------- */
+#site-navigation {
+  display: inline-block;
+  text-align: center;
+  clear: none;
+  padding: 0;
+  border-top: solid 2px @top-bar-bg;
+  //border-bottom: solid 1px darken(@background, 6%);
+  ul {
+    li {
+      float: none;
+      display: inline-block;
+      &.menu-item-has-children > a:after {
+	      content: "\f107";
+	      font-family: "FontAwesome";
+	      color: fade(@content, 80%);
+	      position: relative;
+	      left: 5px;
+	      transition: 0.4s all ease;
+	      display: inline-block;
+	      transform-origin: center;
+	      a:after {
+		      transform: rotate(90deg);
+	      }
+      }
+      a {
+        padding: 13px 13px;
+        color: @content;
+        font-weight: 600;
+        font-size: 14px;
+        background: none;
+        .transition( 0.2s all ease );
+        margin-right: 1px;
+        text-rendering: optimizeLegibility;
+      }
+      &:hover {
+        a {
+          color: @accent; 
+          text-decoration: none;
+        }
+        a:after {
+	        transform: rotate(180deg);
+	        color: @accent;
+        }
+        ul {
+	        
+	        a:after {
+			      transform: rotate(-90deg);
+			      color: fade(@content, 80%);
+		      }
+		      li:hover, li:focus {
+			      & > a {
+				  	color: @accent;
+			      }
+			      a:after {
+				      color: @accent;
+			      }
+		      }
+		      
+        }
+      }
+      ul li .menu-desc {
+        display: none;
+      }
+      ul.sub-menu, ul.children {
+        top: 100%;
+        display: block;
+        .transition( 0.4s all ease );
+        perspective: 1000;
+        -webkit-perspective: 1000;
+        transform-origin: top;
+        -webkit-transform-origin: top;
+        transform: perspective(350px) translateX(20px);
+        -webkit-transform: perspective(350px) translateX(20px);
+        -moz-transform: perspective(350px) translateX(20px);
+        opacity: 0;
+        visibility: hidden;
+        text-align: left;
+        background: @background;
+        border-radius: 0px;
+        box-shadow: none;
+        width: 200px;
+        border: solid 1px darken(@background, 6%);
+        border-top: none;
+        &.makevisible {
+	      display: block;
+          transform: translateX(0px);
+          -webkit-transform: translateX(0px);
+          opacity: 1;
+          visibility: visible;
+        }
+        li {
+	        width: 100%;
+        }
+        a {
+          background: none;
+          border-radius: 0px;
+          margin-right: 0px;
+          text-transform: none;
+          color: @content;
+          padding: 12px 10px;
+          display: block;
+          width: 100%;
+          border-bottom: solid 1px darken(@background, 6%);
+          text-transform: uppercase;
+          font-size: 11px;
+        }
+        li ul {
+          transform-origin: left;
+          -webkit-transform-origin: left;
+          .transition( 0.4s all ease );
+          left: 100%;
+          top: 0;
+          opacity: 0 !important;
+          li ul {
+            display: none !important;
+          }
+        }
+        li:hover {
+          .transition(0.2s all ease);
+          /* -webkit-transition: 0.2s all ease !important; */
+          ul {
+            opacity: 1 !important;
+          }
+        }
+        ul.makevisible {
+	        opacity: 1 !important;
+        }
+        a {
+          transition: 0.4s all ease;
+          &:hover, &:focus {
+            transform-origin: left;
+            color: @accent;
+          }
+        }
+      }
+      &:hover {
+        .transition(0.4s all ease);
+        -webkit-transition: 0.4s all ease !important;
+        ul.sub-menu, ul.children {
+          display: block;
+          transform: translateX(0px);
+          -webkit-transform: translateX(0px);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    /* for the Currently active page */
+    .current_page_item > a, .current-menu-item > a, .current_page_ancestor > a {
+      background: none;
+    }
+  }
+  .fa {
+    padding: 0 5px 0 0;
+  }
+  .menu-desc {
+    font-size: 12px;
+    font-weight: 300;
+    color: #eee;
+    display: inline-block;
+    margin-top: -5px;
+    font-style: italic;
+    text-transform: lowercase;
+  }
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a {
+    color: @accent;
+  }
+  @media screen and (max-width: 767px) {
+  	display: none;  
+  }
+    
+}
+
+
+.menu-link {
+	
+	display: inline-block;
+	float: right;
+	padding: 13px 15px;
+    font-size: 21px;
+    color: @content;
+    @media screen and (min-width: 768px) { 
+		display: none !important;
+	}
+}
+.search-drop {
+	margin-right: 10px;
+}

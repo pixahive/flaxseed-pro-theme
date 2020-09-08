@@ -1,0 +1,40 @@
+.flaxseed-pro {
+	display: block;
+	clear: both;
+	overflow: auto;
+	&:first-child {
+		margin-top: 0; 
+		padding-top: 10px;
+	}
+	.featured-thumb {
+		border-radius: 2px;
+	}
+	.out-thumb {
+		.entry-title {
+			margin-bottom: 12px;
+			font-size: 23px;
+			line-height: 1.4em;
+			font-weight: 600;
+		}
+		.entry-excerpt {
+			margin-bottom: 10px;
+		}
+		.postedon {
+			font-size: 12px;
+			letter-spacing: 1px;
+			text-decoration: none;
+			margin-bottom: 12px;
+			.body-font;
+			a {
+				text-decoration: none;
+				color: @content;
+				&:hover {
+					color: @accent;
+				}
+			}
+		}
+		.byline {
+			margin-left: 15px;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.transition ( @a ) {
+	transition: @a;
+	-webkit-transition: @a;
+	-moz-transition: @a;
+	-ms-transition: @a;
+	-o-transition: @a;
+}
+.transform( @b ) {
+	transform: @b;
+	-webkit-transform: @b;
+	-moz-transform: @b;
+	-ms-transform: @b;
+	-o-transform: @b;
+}
+
+
+.placeholder(@color: #777){
+    &::-webkit-input-placeholder {
+        color: @color;
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+    &:-moz-placeholder {
+        color: @color;
+    }
+    &::-moz-placeholder {
+        color: @color;
+    }
+    &:-ms-input-placeholder {
+        color: @color;
+    }
+}
