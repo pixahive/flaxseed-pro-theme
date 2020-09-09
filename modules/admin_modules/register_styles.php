@@ -54,8 +54,8 @@ function flaxseedpro_css() {
 	?>
 	<style>
 		#masthead .site-title a { color: #<?php echo esc_attr( get_header_textcolor() ); ?>; } 
-		.title-font { font-family: <?php echo esc_attr( get_theme_mod( 'flaxseedpro_title_font', 'Work Sans, sans-serif' ) ); ?>; } 
-		.body-font { font-family: <?php echo esc_attr( get_theme_mod( 'flaxseedpro_body_font', 'Libre Baskerville, serif' ) ); ?>; } 
+		.title-font, #secondary .widget-title { font-family: <?php echo esc_attr( get_theme_mod( 'flaxseedpro_title_font', 'Work Sans, sans-serif' ) ); ?>; } 
+		.body-font, body, #secondary, .flaxseed-pro .out-thumb .postedon { font-family: <?php echo esc_attr( get_theme_mod( 'flaxseedpro_body_font', 'Libre Baskerville, serif' ) ); ?>; } 
 	</style>
 	<?php
 }
