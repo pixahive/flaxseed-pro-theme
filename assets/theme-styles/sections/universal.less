@@ -117,3 +117,32 @@ a {
 .pl-0{
     padding-left: 0px !important;
 }
+
+/*** Works on common browsers ***/
+::selection {
+    background-color: @accent;
+    color: @background;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: @accent;
+    color: @background;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: @accent;
+    color: @background;
+}
+
+::-ms-selection {
+    background-color: @accent;
+    color: @background;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: @accent;
+    color: @background;
+}

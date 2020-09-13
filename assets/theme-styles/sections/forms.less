@@ -1,0 +1,269 @@
+/* --------------- Form Styling for Contact Form 7 -------------- */
+
+.wpcf7{
+    label {
+        background: @accent;
+        color: @background;
+        border-bottom: solid 1px @accent;
+        padding: 5px 0px;
+        margin-right: -5px;
+        min-width: 70px;
+    }
+    .wpcf7-form-control-wrap{
+        input, textarea, select {
+            background: darken(@background,5%);
+            border: solid 1px darken(@background,20%);
+            color: @content;
+            width: 100%;
+            outline: none;
+            &:focus {
+                outline: solid 2px @accent;
+            }
+        }
+        select{
+            border: 1px solid #CCC;
+            height: 34px;
+            width: 100%;
+        }
+        .wpcf7-checkbox label{
+            background: inherit !important;
+            color: @content;
+            border-bottom: none;
+            margin-right: 0px;
+        }
+        .wpcf7-radio label{
+            background: inherit !important;
+            color: @content;
+            border-bottom: none;
+            margin-right: 0px;
+        }
+        .wpcf7-acceptance label{
+            background: inherit !important;
+            color: @content;
+            border-bottom: none;
+            margin-right: 0px;
+        }
+        input[type=checkbox] {
+            transform: scale(0.6);
+        }
+
+        input[type=checkbox] {
+            width: 30px;
+            height: 20px;
+            margin-right: 8px;
+            cursor: pointer;
+            font-size: 17px;
+            visibility: hidden;
+        }
+
+        input[type=checkbox]:after {
+            content: " ";
+            background-color: #fff;
+            display: inline-block;
+            padding-bottom: 5px;
+            color: @accent;
+            width: 22px;
+            height: 25px;
+            visibility: visible;
+            border: 1px solid @accent;
+            padding-left: 3px;
+            border-radius: 5px;
+        }
+
+        input[type=checkbox]:checked:after {
+            content: "\2714";
+            padding: -5px;
+            font-weight: bold;
+        }
+        input[type=radio]{
+            width: auto !important;
+            &:focus {
+                outline: none;
+            }
+        }
+        input[type='radio']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: white;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 1px solid @accent;
+        }
+
+        input[type='radio']:checked:after {
+            width: 7px;
+            height: 8px;
+            border-radius: 15px;
+            top: -7px;
+            left: 3px;
+            position: relative;
+            background-color: @accent;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: none;
+        }
+        input[type=file]{
+            border: none !important;
+            background-color: transparent;
+        }
+        ::-webkit-file-upload-button {
+            border: 2px solid @accent;
+            color: gray;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    input[type=submit] {
+        box-shadow: none;
+        text-shadow: none;
+        padding: 10px;
+        background: lighten(@background,5%);
+        font-weight: bold;
+        color: @accent;
+        margin-bottom: 60px;
+    }
+}
+
+/* --------------- Form Styling for Gravity Forms -------------- */
+
+.gform_wrapper{
+    .percentbar_blue{
+        background-color: @accent !important;
+    }
+    .gfield_label {
+        background: @accent;
+        color: @background;
+        border-bottom: solid 1px @accent;
+        padding: 5px 5px;
+        margin-right: -5px;
+        min-width: 70px;
+    }        
+    input, textarea, select {
+        background: darken(@background,5%);
+        border: solid 1px darken(@background,20%);
+        color: @content;
+        width: 100% !important;
+        outline: none;
+        &:focus {
+            outline: solid 2px @accent;
+        }
+    }
+    select{
+        border: 1px solid #CCC;
+        height: 34px;
+        width: 100%;
+    }
+    .top_label div.ginput_container{
+        margin-top: 0px !important;
+    }
+    input[type=file]{
+        border: none !important;
+        background-color: transparent;
+        margin-top: 5px;
+    }
+    ::-webkit-file-upload-button {
+        border: 2px solid @accent;
+        color: gray;
+        padding: 8px 10px;
+        border-radius: 8px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    input[type=checkbox] {
+        transform: scale(0.6);
+    }
+
+    input[type=checkbox] {
+        width: 30px !important;
+        height: 20px;
+        margin-right: 8px;
+        cursor: pointer;
+        font-size: 17px;
+        visibility: hidden;
+        margin-top: 0px !important;
+    }
+
+    input[type=checkbox]:after {
+        content: " ";
+        background-color: #fff;
+        display: inline-block;
+        padding-bottom: 5px;
+        color: @accent;
+        width: 22px;
+        height: 25px;
+        visibility: visible;
+        border: 1px solid @accent;
+        padding-left: 3px;
+        border-radius: 5px;
+    }
+
+    input[type=checkbox]:checked:after {
+        content: "\2714";
+        padding: -5px;
+        font-weight: bold;
+    }
+    input[type=radio]{
+        width: auto !important;
+        margin-top: 0px !important;
+        &:focus {
+            outline: none;
+        }
+    }
+    input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: white;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 1px solid @accent;
+    }
+
+    input[type='radio']:checked:after {
+        width: 7px;
+        height: 8px;
+        border-radius: 15px;
+        top: -7px;
+        left: 3px;
+        position: relative;
+        background-color: @accent;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: none;
+    }
+    .gfield_label_before_complex{
+        margin-bottom: -3px;
+    }
+    .gform_button button{
+        box-shadow: none;
+        text-shadow: none;
+        padding: 10px;
+        background: lighten(@background,5%);
+        font-weight: bold;
+        color: @accent;
+        margin-bottom: 60px;
+    }
+    input[type=submit]{
+        box-shadow: none;
+        text-shadow: none;
+        padding: 10px;
+        background: lighten(@background,5%);
+        font-weight: bold;
+        color: @accent;
+        margin-bottom: 60px;
+        width: auto !important;
+    }
+}
