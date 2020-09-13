@@ -109,6 +109,9 @@ if ( ! function_exists( 'flaxseedpro_setup' ) ) :
 				'height'             => 400,
 			)
 		);
+                
+                //Setting posts per page to 9.
+                update_option('posts_per_page', 9);
 
 	}
 

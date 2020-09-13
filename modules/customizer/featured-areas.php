@@ -1,6 +1,6 @@
 <?php
 /**
- * Font Customizer
+ * Featured Area Customizer
  *
  * @package flaxseed-pro
  */

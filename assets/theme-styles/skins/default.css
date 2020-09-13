@@ -730,6 +730,11 @@ a {
   max-height: 290px !important;
   width: 100%;
 }
+@media (min-width: 720px) and (max-width: 1024px) {
+  .featured-post-thumbnail-primary {
+    max-height: none !important;
+  }
+}
 .featured-post-thumbnail-secondary {
   max-height: 90px;
   width: 100%;

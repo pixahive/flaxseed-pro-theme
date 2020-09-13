@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme Functions
+ * Theme Functions.
  *
  * @package flaxseed-pro
  */
@@ -35,9 +35,14 @@ add_action( 'flaxseedpro_secondary-width', 'flaxseedpro_secondary_class' );
  * Function to Get Theme Layout
  */
 function flaxseedpro_get_blog_layout() {
-	$ldir = 'modules/content/content';
-	if ( get_theme_mod( 'flaxseedpro_blog_layout' ) ) :
-		get_template_part( $ldir, get_theme_mod( 'flaxseedpro_blog_layout' ) );
+	$ldir                 = 'modules/content/content';
+	$user_selected_layout = get_theme_mod( 'flaxseedpro_blog_layout' );
+	if ( $user_selected_layout ) :
+		if ( 'flaxseed-pro' === $user_selected_layout ) :
+			get_template_part( $ldir, 'flaxseed-pro' );
+		else :
+			get_template_part( $ldir, 'flaxseed-pro-' . $user_selected_layout );
+		endif;
 	else :
 		get_template_part( $ldir, 'flaxseed-pro' );
 	endif;
