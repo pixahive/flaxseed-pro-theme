@@ -1,95 +1,148 @@
 /* section titles */
 .body-font {
-  font-family: "Work Sans", Arial, sans-serif;
+    font-family: "Work Sans", Arial, sans-serif;
 }
 .title-font {
-  font-family: "Libre Baskerville", "Times", "Times News Roman", serif; 
+    font-family: "Libre Baskerville", "Times", "Times News Roman", serif; 
 }
 
 #page, .container {
-	max-width: 1100px;
-	margin: auto;
+    max-width: 1100px;
+    margin: auto;
 }
 #page {
-	margin-top: 30px;
-	@media screen and (max-width: 767px) {
-		margin-top: 0;
-	}
+    margin-top: 30px;
+    @media screen and (max-width: 767px) {
+        margin-top: 0;
+    }
 }
 body {
-  .body-font;
-  background: darken(@background,6%);
-  word-wrap: break-word;
-  overflow: hidden;
+    .body-font;
+    background: darken(@background,6%);
+    word-wrap: break-word;
+    overflow: hidden;
 }
 .mega-container {
-  background: white;
-  background: linear-gradient(to right, white, fade(white, 99%), fade(white, 90%));
-  max-width: 1170px;
-  margin: auto;
-  margin-top: 00px;
-  overflow: visible;
-  position: relative;
+    background: white;
+    background: linear-gradient(to right, white, fade(white, 99%), fade(white, 90%));
+    max-width: 1170px;
+    margin: auto;
+    margin-top: 00px;
+    overflow: visible;
+    position: relative;
 }
 a { 
-  color: #24a57c;
-  cursor: pointer;
-  text-decoration: none;
+    color: #24a57c;
+    cursor: pointer;
+    text-decoration: none;
 }
 #top-bar, #masthead, #page, .featured-carousel, .featured-style1 {
-	a {
-		&:hover {
-		    text-decoration: underline;
-		  }
-		  &:focus {
-			  outline: @accent 1px solid;
-		  }
-	}
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus {
+            outline: @accent 1px solid;
+        }
+    }
 }
 .section-title {
-  color: #5ba3b1;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: left;
-  font-size: 24px;
-  margin-bottom: 10px;
-  margin-top: 5px;
-  position: relative;
-  z-index: 3;
-  text-align: left;
-  .title-font;
-  @media screen and (max-width: 991px) {
-    margin-top: 20px;
-  }
-  span {
-    background: @background;
+    color: #5ba3b1;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 5px;
     position: relative;
-    padding: 5px 8px;
-    padding-right: 15px;
-    z-index: 1;
-    display: inline-block;
-  }
+    z-index: 3;
+    text-align: left;
+    .title-font;
+    @media screen and (max-width: 991px) {
+        margin-top: 20px;
+    }
+    span {
+        background: @background;
+        position: relative;
+        padding: 5px 8px;
+        padding-right: 15px;
+        z-index: 1;
+        display: inline-block;
+    }
 }
 #content {
-  margin-top: 0px;
-  padding-top: 10px;
-  margin-bottom: 30px;
+    margin-top: 0px;
+    padding-top: 10px;
+    margin-bottom: 30px;
 }
 #main {
-  overflow: visible;
-  clear: both;
+    overflow: visible;
+    clear: both;
 }
 #primary .section-title span {
-  padding-left: 0;
+    padding-left: 0;
 }
 .layer {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: fade(black,60%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: fade(black,60%);
 }
 #primary {
-	//padding-left: 0;
+    //padding-left: 0;
+}
+.mb-3{
+    margin-bottom: 2rem;
+}
+.mt-3{
+    margin-top: 2rem;
+}
+.theme-button{
+    box-shadow: none;
+    text-shadow: none;
+    padding: 10px;
+    background: #ffffff;
+    color: #22AAA1;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.pr-0{
+    padding-right: 0px !important;
+}
+.pl-0{
+    padding-left: 0px !important;
+}
+
+/*** Works on common browsers ***/
+::selection {
+    background-color: @accent;
+    color: @background;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: @accent;
+    color: @background;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: @accent;
+    color: @background;
+}
+
+::-ms-selection {
+    background-color: @accent;
+    color: @background;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: @accent;
+    color: @background;
 }

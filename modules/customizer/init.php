@@ -21,5 +21,7 @@ add_action( 'customize_register', 'flaxseedpro_customize_register' );
 require_once get_template_directory() . '/modules/customizer/_sanitization.php';
 require_once get_template_directory() . '/modules/customizer/header.php';
 require_once get_template_directory() . '/modules/customizer/social-icons.php';
+require_once get_template_directory() . '/modules/customizer/google-fonts.php';
 require_once get_template_directory() . '/modules/customizer/fonts.php';
 require_once get_template_directory() . '/modules/customizer/featured-areas.php';
+require_once get_template_directory() . '/modules/customizer/blog-layouts.php';

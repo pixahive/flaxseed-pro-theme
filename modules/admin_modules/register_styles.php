@@ -4,7 +4,7 @@
  * Enqueue scripts and styles.
  */
 function flaxseedpro_scripts() {
-	global $wp_customize;
+	global $wp_customize, $google_fonts_arr;
 	wp_enqueue_style( 'flaxseed-pro-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'flaxseed-pro-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/skins/default.css', array() );
@@ -14,8 +14,6 @@ function flaxseedpro_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	// Get google fonts array
-	$google_fonts_arr = get_option( 'google-fonts-array' );
 	// Get title font set by user
 	$title_font = get_theme_mod( 'flaxseedpro_title_font' );
 	if ( array_key_exists( $title_font, $google_fonts_arr ) ) {
