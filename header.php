@@ -12,8 +12,10 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'flaxseed-pro' ); ?></a>
-<?php get_template_part('modules/header/masthead'); ?>
-
+<?php 
+    # Include header layout.
+    do_action('flaxseedpro_header_layout');
+?>
 <?php if (is_front_page() && has_header_image() ) : ?>
 <div id="header-image" class="container">
 	<img src="<?php header_image(); ?>" alt="<?php the_title_attribute(); ?>">

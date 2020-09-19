@@ -49,6 +49,24 @@ function flaxseedpro_get_blog_layout() {
 }
 
 add_action( 'flaxseedpro_blog_layout', 'flaxseedpro_get_blog_layout' );
+/**
+ * Function to Get Header Layout
+ */
+function flaxseedpro_get_header_layout() {
+	$ldir                 = 'modules/content/content';
+	$user_selected_layout = get_theme_mod( 'flaxseedpro_header_layout' );
+	if ( $user_selected_layout ) :
+		if ( 'flaxseed-pro' === $user_selected_layout ) :
+			get_template_part('modules/header/masthead');
+		else :
+			get_template_part( $ldir, 'header-' . $user_selected_layout );
+		endif;
+	else :
+            get_template_part('modules/header/masthead');
+	endif;
+}
+
+add_action( 'flaxseedpro_header_layout', 'flaxseedpro_get_header_layout' );
 
 /**
  * Custom template tags for this theme.
