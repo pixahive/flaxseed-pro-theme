@@ -569,12 +569,46 @@ a {
 #masthead #jumbosearch {
   display: none;
 }
+.header-style-1 #site-logo-left {
+  display: inline-block;
+  text-align: left;
+}
+.header-style-1 #site-logo-left img {
+  max-width: 50px;
+}
+@media screen and (max-width: 767px) {
+  .header-style-1 #site-logo-left {
+    display: block;
+    text-align: center;
+  }
+  .header-style-1 #site-logo-left img {
+    max-width: 50px;
+  }
+}
+.header-style-1 #text-title-desc {
+  display: inline-block;
+  clear: none;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 0px;
+  margin-top: -42px;
+}
+@media screen and (max-width: 767px) {
+  .header-style-1 #text-title-desc {
+    padding-left: 0;
+    margin-top: 0;
+  }
+}
+.header-style-1 #site-navigation {
+  border: none;
+  text-align: left;
+}
 @media screen and (max-width: 767px) {
   .top-container {
     background: rgba(0, 0, 0, 0.1);
   }
   #menu {
-    z-index: 99999;
+    z-index: 999;
     background: #333;
   }
   #menu ul {
