@@ -31,24 +31,12 @@ jQuery(document).ready(function() {
 
 jQuery(document).ready(function() { 
         
-    jQuery('.menu-link').bigSlide({
+    jQuery('.toggle-menu-link').bigSlide({
         easyClose: true,
-        side: 'left'
+        side: 'left',
+        afterOpen: function() { jQuery("#close-menu").focus(); },
+        afterClose: function() { jQuery("#masthead .toggle-menu-link").focus();}
     });
-    
-    
-    jQuery('#masthead .menu-link').toggle(function(){
-	    jQuery("#close-menu").focus();
-	    
-    }, function() {
-	    jQuery("#masthead .menu-link").focus();
-	    
-    });
-    
-    jQuery("#close-menu").click(function(){
-	    jQuery("#masthead .menu-link").focus();
-    });
-    
     
     jQuery('.go-to-top').focus(function(){
 	    jQuery("#close-menu").focus();
@@ -57,9 +45,7 @@ jQuery(document).ready(function() {
     jQuery('.go-to-bottom').focus(function(){
 	    jQuery("#menu ul.menu li:last-of-type a").focus();
     });
-    
-    
-    
+         
     jQuery('#searchicon').click(function(){
 	   jQuery('#jumbosearch').slideToggle('slow'); 
 	   jQuery('#jumbosearch .search-field').focus();   
@@ -67,7 +53,7 @@ jQuery(document).ready(function() {
     
     jQuery('#jumbosearch .search-field').focusout(function(){
 	     jQuery('#jumbosearch').slideToggle('fast'); 
-	    jQuery("#masthead .menu-link").focus();
+	    jQuery("#masthead .toggle-menu-link").focus();
     });
     
     jQuery('#menu ul li.menu-item-has-children').append("<i class='fa fa-angle-down'></i>");

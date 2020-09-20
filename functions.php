@@ -47,25 +47,26 @@ function flaxseedpro_get_blog_layout() {
 		get_template_part( $ldir, 'flaxseed-pro' );
 	endif;
 }
-
 add_action( 'flaxseedpro_blog_layout', 'flaxseedpro_get_blog_layout' );
+
+
 /**
  * Function to Get Header Layout
  */
 function flaxseedpro_get_header_layout() {
-	$ldir                 = 'modules/content/content';
+	$ldir = 'modules/header/layouts/';
 	$user_selected_layout = get_theme_mod( 'flaxseedpro_header_layout' );
+	
 	if ( $user_selected_layout ) :
 		if ( 'flaxseed-pro' === $user_selected_layout ) :
 			get_template_part('modules/header/masthead');
 		else :
-			get_template_part( $ldir, 'header-' . $user_selected_layout );
+			get_template_part( $ldir. 'masthead-' . $user_selected_layout );
 		endif;
 	else :
-            get_template_part('modules/header/masthead');
+            get_template_part('modules/header/layouts/masthead','default');
 	endif;
 }
-
 add_action( 'flaxseedpro_header_layout', 'flaxseedpro_get_header_layout' );
 
 /**
@@ -305,7 +306,7 @@ function flaxseedpro_featured_style2( $fa_title, $cat ) {
 											<div class="post-title-parent">
 												<a class="post-title title-font" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 												<div class="post-author">
-													By <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time( 'F j, Y' ); ?>
+													<?php _e('By','flaxseed-pro'); ?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time( 'F j, Y' ); ?>
 												</div>
 												<div class="entry-excerpt body-font mb-3">
 											<?php
@@ -338,7 +339,7 @@ function flaxseedpro_featured_style2( $fa_title, $cat ) {
 										<div class="md-8 mb-3">
 											<div class="post-title-parent">
 												<a class="post-title title-font" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-												<br><small>By <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="url fn n" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time( 'F j, Y' ); ?></small>
+												<br><small><?php _e('By','flaxseed-pro'); ?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="url fn n" title="<?php echo esc_attr( get_the_author() ); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time( 'F j, Y' ); ?></small>
 											</div>
 											<div class="post-excerpt">
 										<?php

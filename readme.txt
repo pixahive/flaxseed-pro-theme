@@ -47,12 +47,20 @@ Header Image appears only on static front page. Go to your Customizer > Settings
 * Further Improved Keyboard Navigation on Phones
 
 = 0.0.0.5 =
-*Minor fix to mobile menu
+* Minor fix to mobile menu
 
 = 1.0 =
 * Removed the awkward menu in the Header
 * Added Theme URI
 * Fixed appearance of Top Bar on Phones
+
+= 1.1 =
+* Improved Compatibility with WP 5.5
+* Fixed Keyboard Nav Bugs
+* Added New Header Layouts
+* Improved File structure
+* Improved Blog Layouts
+* Added Support for Google Fonts
 
 
 == Credits ==

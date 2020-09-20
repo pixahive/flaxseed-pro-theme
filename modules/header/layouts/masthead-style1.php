@@ -1,4 +1,4 @@
-<div id="top-bar">
+<div id="top-bar" class="header-style-1">
     <div class="container">
         <div class="top-bar-date">
             <div id="social">
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>     		
-        <div id="menu-icon"><button href="#menu" class="menu-link"><i class="fa fa-bars"></i></button></div>
+        <div id="menu-icon"><button href="#menu" class="toggle-menu-link"><i class="fa fa-bars"></i></button></div>
     </div>
     <?php get_template_part('modules/header/jumbosearch'); ?>
 </header><!-- #masthead -->

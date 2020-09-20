@@ -25,7 +25,7 @@
 
 <nav id="menu" class="panel" role="navigation">
 	<button class="go-to-bottom"><i class="fa fa-down"></i></button>
-	<button id="close-menu" class="menu-link"><i class="fa fa-times"></i></button>
+	<button id="close-menu" class="toggle-menu-link"><i class="fa fa-times"></i></button>
 	<?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
 	<button class="go-to-top"><i class="fa fa-up"></i></button>
 	 
