@@ -348,6 +348,9 @@ a {
   padding-top: 10px;
   margin-bottom: 30px;
 }
+#content:first-child {
+  margin-top: 25px;
+}
 #main {
   overflow: visible;
   clear: both;
@@ -556,7 +559,7 @@ a {
   }
 }
 @media screen and (max-width: 767px) {
-  #masthead .menu-link {
+  #masthead .toggle-menu-link {
     order: 1;
   }
 }
@@ -569,23 +572,23 @@ a {
 #masthead #jumbosearch {
   display: none;
 }
-.header-style-1 #site-logo-left {
+#masthead.header-style-1 #site-logo-left {
   display: inline-block;
   text-align: left;
 }
-.header-style-1 #site-logo-left img {
+#masthead.header-style-1 #site-logo-left img {
   max-width: 50px;
 }
 @media screen and (max-width: 767px) {
-  .header-style-1 #site-logo-left {
+  #masthead.header-style-1 #site-logo-left {
     display: block;
     text-align: center;
   }
-  .header-style-1 #site-logo-left img {
+  #masthead.header-style-1 #site-logo-left img {
     max-width: 50px;
   }
 }
-.header-style-1 #text-title-desc {
+#masthead.header-style-1 #text-title-desc {
   display: inline-block;
   clear: none;
   vertical-align: middle;
@@ -594,14 +597,29 @@ a {
   margin-top: -42px;
 }
 @media screen and (max-width: 767px) {
-  .header-style-1 #text-title-desc {
+  #masthead.header-style-1 #text-title-desc {
     padding-left: 0;
     margin-top: 0;
   }
 }
-.header-style-1 #site-navigation {
+#masthead.header-style-1 #site-navigation {
   border: none;
   text-align: left;
+}
+#masthead.header-style-1 .site-branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: visible;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  #masthead.header-style-1 .site-branding {
+    text-align: center;
+  }
+}
+#masthead.header-style-1 .site-branding #text-title-desc {
+  margin-top: 0;
 }
 @media screen and (max-width: 767px) {
   .top-container {
@@ -652,7 +670,7 @@ a {
     top: -10px;
   }
   #masthead #menu-icon button {
-    display: inline-block;
+    display: inline-block !important;
     padding: 13px 15px;
     background: none;
     border: none;
@@ -691,6 +709,12 @@ a {
   }
   #jumbosearch .container {
     padding: 0;
+  }
+  #masthead.header-style-1 .md-4 {
+    margin: auto;
+  }
+  #masthead.header-style-1 .md-8 {
+    display: none;
   }
 }
 #header-image {
@@ -989,7 +1013,7 @@ a {
     display: none;
   }
 }
-.menu-link {
+.toggle-menu-link {
   display: inline-block;
   float: right;
   padding: 13px 15px;
@@ -997,7 +1021,7 @@ a {
   color: #444;
 }
 @media screen and (min-width: 768px) {
-  .menu-link {
+  .toggle-menu-link {
     display: none !important;
   }
 }

@@ -51,7 +51,7 @@
 	        <?php endif; ?>
 	    </div>     		
 	    
-	    <div id="menu-icon"><button href="#menu" class="menu-link"><i class="fa fa-bars"></i></button></div>
+	    <div id="menu-icon"><button href="#menu" class="toggle-menu-link"><i class="fa fa-bars"></i></button></div>
 	    
 	    
 	</div>

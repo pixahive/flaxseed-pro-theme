@@ -20,7 +20,7 @@ function flaxseedpro_customize_register_header_layouts( $wp_customize ) {
 	);
 
 	$header_layouts = array(// Redefinied in Sanitization Function.
-		'flaxseed-pro' => __( 'Theme Default', 'flaxseed-pro' ),
+		'default' => __( 'Theme Default', 'flaxseed-pro' ),
 		'style1'       => __( 'Header Layout 1', 'flaxseed-pro' ),
 		'style2'       => __( 'Header Layout 2', 'flaxseed-pro' )
 	);
