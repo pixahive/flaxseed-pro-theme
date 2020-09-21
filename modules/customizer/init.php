@@ -26,3 +26,4 @@ require_once get_template_directory() . '/modules/customizer/fonts.php';
 require_once get_template_directory() . '/modules/customizer/featured-areas.php';
 require_once get_template_directory() . '/modules/customizer/header-layouts.php';
 require_once get_template_directory() . '/modules/customizer/blog-layouts.php';
+require_once get_template_directory() . '/modules/customizer/footer-options.php';

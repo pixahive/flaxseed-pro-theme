@@ -584,8 +584,13 @@ a {
     display: block;
     text-align: center;
   }
-  #masthead.header-style-1 #site-logo-left img {
-    max-width: 50px;
+}
+#masthead.header-style-1 .site-title {
+  margin-top: -40px;
+}
+@media screen and (max-width: 767px) {
+  #masthead.header-style-1 .site-title {
+    margin-top: auto;
   }
 }
 #masthead.header-style-1 #text-title-desc {
