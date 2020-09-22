@@ -87,15 +87,6 @@ if (defined('JETPACK__VERSION')) {
 }
 
 /**
- * Function to register footer menu for theme.
- */
-function register_footer_menu() {
-    register_nav_menu('footer-menu', __('Footer menu'));
-}
-
-add_action('init', 'register_footer_menu');
-
-/**
  *
  * Function to display featured area depending on user choice
  *
@@ -229,11 +220,11 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                     if (1 === $counter) :
                         ?>
 
-                        <div class="feat-col1 md-3">
+                        <div class="feat-col1 md-3 sm-3">
                         <?php elseif (3 === $counter) : ?>
-                            <div class="feat-col2 md-6"> 
+                            <div class="feat-col2 md-6 sm-6"> 
                             <?php elseif (4 === $counter) : ?>
-                                <div class="feat-col3 md-3"> 		 
+                                <div class="feat-col3 md-3 sm-3"> 		 
                                 <?php endif; ?>		 	
 
                                 <article id="post-<?php the_ID(); ?>" <?php post_class('featured-post-item'); ?>>
@@ -282,7 +273,7 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
          */
         function flaxseedpro_featured_style2($fa_title, $cat) {
             ?>
-            <div class="featured-style1">
+            <div class="featured-style1 featured-style2">
                 <?php if ('' !== $fa_title) : ?>
                     <h2 class="featured-section-title container">
                         <?php echo esc_html($fa_title); ?>
@@ -302,7 +293,7 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                             $counter++;
                             if (1 === $counter) {
                                 ?>
-                                <div class="feat-col1 md-6">
+                                <div class="feat-col1 md-6 sm-6">
                                     <div class="md-12 pr-0 pl-0">
                                         <article id="post-<?php the_ID(); ?>" <?php post_class('featured-post-item'); ?>>
                                             <div class="item-container mb-3">
@@ -319,16 +310,16 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                                                 </div>
                                                 <div class="entry-excerpt body-font mb-3"><?php the_excerpt(); ?></div>
                                             </div>
-                                            <a href="<?php the_permalink(); ?>" class="theme-button">Read More</a>
+                                            <a href="<?php the_permalink(); ?>" class="theme-button"><?php _e('Read More','flaxseed-pro') ?></a>
                                         </article>
                                     </div>
                                 </div>
                                 <?php
                             } else {
                                 ?>
-                                <div class="feat-col1 md-6">
+                                <div class="feat-col2 md-6 sm-6">
                                     <article id="post-<?php the_ID(); ?>" <?php post_class('featured-post-item'); ?>>
-                                        <div class="md-4 pr-0 pl-0">
+                                        <div class="md-4 xs-4">
                                             <div class="item-container">
                                                 <?php if (has_post_thumbnail()) : ?>	
                                                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium', array('class' => 'featured-post-thumbnail-secondary')); ?></a>
@@ -337,12 +328,11 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                                                 <?php endif; ?>
                                             </div>
                                         </div>
-                                        <div class="md-8 mb-3">
+                                        <div class="md-8 xs-8">
                                             <div class="post-title-parent">
                                                 <a class="post-title title-font" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                                 <br><small><?php esc_html_e('By', 'flaxseed-pro'); ?> <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="url fn n" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
                                             </div>
-                                            <div class="post-excerpt"><?php the_excerpt(); ?></div>
                                         </div>
                                     </article>
                                 </div>
@@ -368,7 +358,7 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
          */
         function flaxseedpro_featured_style3($fa_title, $cat) {
             ?>
-            <div class="featured-style1">
+            <div class="featured-style1 featured-style3">
                 <?php if ('' !== $fa_title) : ?>
                     <h2 class="featured-section-title container">
                         <?php echo esc_html($fa_title); ?>
@@ -388,35 +378,34 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                             $counter++;
                             if (1 === $counter) {
                                 ?>
-                                <div class="md-12 pr-0 pl-0">
                                     <article id="post-<?php the_ID(); ?>" <?php post_class('featured-post-item'); ?>>
-                                        <div class="feat-col1 md-6">
-                                            <div class="item-container mb-3">
+                                        <div class="feat-col1 md-12">
+                                            <div class="item-container md-6">
                                                 <?php if (has_post_thumbnail()) : ?>	
                                                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium-large', array('class' => 'featured-post-thumbnail-primary')); ?></a>
                                                 <?php else : ?>
                                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder.png'); ?>"></a>
                                                 <?php endif; ?>
                                             </div>
-                                        </div>
-                                        <div class="md-6">
-                                            <div class="post-title-parent">
-                                                <a class="post-title title-font mb-3" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                                <div class="post-author mb-3">
-                                                    <small>By <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
+                                            <div class="md-6">
+                                                <div class="post-title-parent">
+                                                    <a class="post-title title-font mb-3" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                    <div class="post-author">
+                                                        <small><?php _e('By','flaxseed-pro') ?> <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
+                                                    </div>
+                                                    <div class="post-excerpt"><?php the_excerpt(); ?></div>
                                                 </div>
-                                                <div class="post-excerpt mb-3"><?php the_excerpt(); ?></div>
+                                                <a href="<?php the_permalink(); ?>" class="theme-button"><?php _e('Read More','flaxseed-pro') ?></a>
                                             </div>
-                                            <a href="<?php the_permalink(); ?>" class="theme-button">Read More</a>
                                         </div>
+                                        
                                     </article>
-                                </div>
                                 <?php
                             } else {
                                 ?>
-                                <div class="feat-col1 md-6 pr-0 pl-0">
+                                <div class="feat-col2 md-6 sm-6">
                                     <article id="post-<?php the_ID(); ?>" <?php post_class('featured-post-item'); ?>>
-                                        <div class="md-4">
+                                        <div class="md-4 xs-4">
                                             <div class="item-container">
                                                 <?php if (has_post_thumbnail()) : ?>	
                                                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium', array('class' => 'featured-post-thumbnail-secondary')); ?></a>
@@ -425,12 +414,11 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                                                 <?php endif; ?>
                                             </div>
                                         </div>
-                                        <div class="md-8 mb-3">
+                                        <div class="md-8 xs-8">
                                             <div class="post-title-parent">
                                                 <a class="post-title title-font" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                                <br><small>By <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="url fn n" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
+                                                <br><small><?php _e('By','flaxseed-pro') ?> <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" class="url fn n" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a>&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
                                             </div>
-                                            <div class="post-excerpt"><?php the_excerpt(); ?></div>
                                         </div>
                                     </article>
                                 </div>
@@ -455,7 +443,7 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
          */
         function flaxseedpro_featured_style4($fa_title, $cat) {
             ?>
-            <div class="featured-style1">
+            <div class="featured-style1 featured-style4">
                 <?php if ('' !== $fa_title) : ?>
                     <h2 class="featured-section-title container">
                         <?php echo esc_html($fa_title); ?>
@@ -471,16 +459,16 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                     if ($fa_posts->have_posts()) :
                         $counter = 0;
                         ?>
-                        <div class="md-7 pr-0 pl-0">
+                        <div class="md-6 sm-6 feat-col1">
                             <?php
                             while ($fa_posts->have_posts()) :
                                 $fa_posts->the_post();
                                 $counter++;
                                 ?>
-                                <div class="md-12 pr-0 pl-0">
+                                <div class="md-12 ">
                                     <article id="post-<?php the_ID(); ?>" <?php post_class('featured-post-item'); ?>>
                                         <div class="feat-col1 md-6">
-                                            <div class="item-container mb-3">
+                                            <div class="item-container">
                                                 <?php if (has_post_thumbnail()) : ?>	
                                                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('medium-large', array('class' => 'featured-post-thumbnail-primary')); ?></a>
                                                 <?php else : ?>
@@ -490,9 +478,9 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                                         </div>
                                         <div class="md-6">
                                             <div class="post-title-parent">
-                                                <a class="post-title title-font mb-3" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                <a class="post-title title-font" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                                 <div class="post-author">
-                                                    <small>By <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a><br><i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
+                                                    <small><i class="fa fa-user"></i> <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a><i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
                                                 </div>
                                                 <div class="post-excerpt mb-3"><?php the_excerpt(); ?></div>
                                             </div>
@@ -516,12 +504,12 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                     if ($fa_posts->have_posts()) {
                         $counter = 0;
                         ?>
-                        <div class="md-5 pr-0 pl-0">
+                        <div class="md-6 sm-6 feat-col2">
                             <?php
                             while ($fa_posts->have_posts()) :
                                 $fa_posts->the_post();
                                 ?>
-                                <div class="md-12 pr-0 pl-0">
+                                <div class="md-12 ">
                                     <article id="post-<?php the_ID(); ?>" <?php post_class('featured-post-item'); ?>>
                                         <div class="md-6">
                                             <div class="item-container mb-3">
@@ -535,8 +523,8 @@ function flaxseedpro_featured_style1($fa_title, $cat) {
                                         <div class="md-6">
                                             <div class="post-title-parent">
                                                 <a class="post-title title-font mb-3" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                                <div class="post-author mb-3">
-                                                    <small>By <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a><br><i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
+                                                <div class="post-author">
+                                                    <small><i class="fa fa-user"></i> <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>" title="<?php echo esc_attr(get_the_author()); ?>"><?php the_author(); ?></a><i class="fa fa-clock-o"></i> <?php the_time('F j, Y'); ?></small>
                                                 </div>
                                                 <!--<div class="post-excerpt mb-3"><?php the_excerpt(); ?></div>-->
                                             </div>

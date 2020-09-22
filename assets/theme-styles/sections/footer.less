@@ -127,7 +127,7 @@
         margin-right: 5px;
 
       }
-    }
+    } 
   }
 }
 
@@ -141,6 +141,34 @@
   a {
     color: @accent;
     text-decoration: underline;
+  }
+}
+
+#colophon.menu-enabled {
+  @media screen and (min-width: 768px) {
+    .copyright {
+      text-align: left;
+      padding-left: 0;
+    }
+    .short-menu {
+      float: right;
+      padding-right: 0;
+    }
+    .md-6:nth-child(2) {padding-right: 0;}
+  }
+  .short-menu {
+    ul ul {
+      display: none;
+    }
+    li a {
+      text-decoration: none;
+      color: @content;
+      border-bottom: solid 1px dotted;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 

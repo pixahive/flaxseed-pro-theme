@@ -19,11 +19,11 @@ if ( $footer_menu ) {
 	if ( 'active' === $footer_menu && has_nav_menu( 'footer-menu' ) ) {
 		// footer_menu is active and footer-menu is assigned a menu from Menus section then show copyright and footer menu.
 		?>
-		<footer id="colophon" class="site-footer title-font" role="contentinfo">
+		<footer id="colophon" class="site-footer title-font menu-enabled" role="contentinfo">
 			<div class="container">
 				<div class="site-info">
-					<div class="md-6">
-						<?php _e( get_theme_mod( 'flaxseedpro_footer_copyright_text' ), 'flaxseed-pro' ); ?>
+					<div class="md-6 copyright">
+						<?php  echo esc_textarea(get_theme_mod('flaxseedpro_footer_copyright_text')); ?>
 					</div>
 					<div class="md-6">
 						<div class="short-menu">
@@ -40,7 +40,7 @@ if ( $footer_menu ) {
 		<footer id="colophon" class="site-footer title-font" role="contentinfo">
 			<div class="container">
 				<div class="site-info">
-					<?php _e( get_theme_mod( 'flaxseedpro_footer_copyright_text' ), 'flaxseed-pro' ); ?>
+					<?php  echo esc_textarea(get_theme_mod( 'flaxseedpro_footer_copyright_text')); ?>
 				</div><!-- .site-info -->
 			</div>
 		</footer><!-- #colophon -->
@@ -59,12 +59,14 @@ if ( $footer_menu ) {
 	<?php
 }
 ?>
+
 <nav id="menu" class="panel" role="navigation">
 	<button class="go-to-bottom"><i class="fa fa-down"></i></button>
 	<button id="close-menu" class="toggle-menu-link"><i class="fa fa-times"></i></button>
 	<?php wp_nav_menu( array( 'theme_location' => 'mobile' ) ); ?>
 	<button class="go-to-top"><i class="fa fa-up"></i></button>
 </nav>
+
 <?php wp_footer(); ?>
 </body>
 </html>

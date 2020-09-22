@@ -366,12 +366,6 @@ a {
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
 }
-.mb-3 {
-  margin-bottom: 2rem;
-}
-.mt-3 {
-  margin-top: 2rem;
-}
 .theme-button {
   box-shadow: none;
   text-shadow: none;
@@ -382,12 +376,6 @@ a {
   border-radius: 3px;
   font-size: 1.2rem;
   line-height: 1;
-}
-.pr-0 {
-  padding-right: 0px !important;
-}
-.pl-0 {
-  padding-left: 0px !important;
 }
 /*** Works on common browsers ***/
 ::selection {
@@ -802,6 +790,158 @@ a {
   max-height: 90px;
   width: 100%;
   object-fit: fill;
+}
+.featured-style2 small,
+.featured-style2 .post-author {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.featured-style2 small a,
+.featured-style2 .post-author a {
+  color: #444;
+  text-decoration: underline;
+}
+.featured-style2 .post-author {
+  margin-bottom: 8px;
+}
+.featured-style2 .feat-col1 {
+  padding: 0;
+}
+.featured-style2 .feat-col1 .post-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+  display: block;
+}
+.featured-style2 .feat-col2 {
+  padding: 0;
+  margin-bottom: 10px;
+}
+.featured-style2 .feat-col2 img {
+  width: 100%;
+  height: auto;
+}
+.featured-style2 .feat-col2 .post-title {
+  font-size: 15px;
+}
+.featured-style2 .feat-col2 .md-8 {
+  padding-left: 0;
+}
+@media screen and (max-width: 767px) {
+  .featured-style2 .feat-col2 {
+    display: block;
+    clear: both;
+    margin-bottom: 20px;
+    overflow: auto;
+  }
+  .featured-style2 .feat-col2 .post-title {
+    font-size: 13px;
+  }
+  .featured-style2 .feat-col2 small {
+    display: none;
+  }
+}
+.featured-style3 .feat-col1,
+.featured-style3 .feat-col2 {
+  padding: 0px;
+  margin-bottom: 10px;
+}
+.featured-style3 small {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: block;
+  margin-top: 5px;
+}
+.featured-style3 small a {
+  color: #444;
+  text-decoration: underline;
+}
+.featured-style3 .feat-col2:nth-child(4) {
+  clear: both;
+}
+.featured-style3 .feat-col1 {
+  padding: 0 15px;
+}
+.featured-style3 .feat-col1 .item-container {
+  padding: 0;
+}
+.featured-style3 .feat-col1 .post-title {
+  font-size: 24px;
+}
+.featured-style3 .feat-col2 a.post-title {
+  font-size: 16px;
+}
+@media screen and (max-width: 767px) {
+  .featured-style3 .feat-col1 .md-6:nth-child(2) {
+    padding: 0;
+  }
+  .featured-style3 .feat-col2 .md-8 {
+    padding-left: 0;
+  }
+  .featured-style3 .feat-col2 .md-8 .post-title {
+    font-size: 14px;
+  }
+  .featured-style3 .feat-col2 .md-8 small {
+    display: none;
+  }
+  .featured-style3 .feat-col2 {
+    display: block;
+    overflow: auto;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .featured-style3 .feat-col1 .md-6 {
+    padding: 0;
+  }
+  .featured-style3 .feat-col2 .md-8 {
+    padding: 0;
+  }
+}
+.featured-style4 .feat-col1,
+.featured-style4 .feat-col2 {
+  padding: 0;
+}
+.featured-style4 .feat-col2 .md-12 {
+  margin-bottom: 20px;
+}
+.featured-style4 small {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: block;
+  margin-top: 5px;
+}
+.featured-style4 small a {
+  color: #444;
+  text-decoration: underline;
+}
+.featured-style4 small .fa-clock-o {
+  margin-left: 8px;
+}
+.featured-style4 .post-excerpt {
+  font-size: 14px;
+}
+@media screen and (max-width: 767px) {
+  .featured-style4 article .md-6 {
+    padding: 0;
+  }
+  .featured-style4 .post-excerpt {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .featured-style4 .feat-col1 .post-title {
+    font-size: 24px;
+  }
+  .featured-style4 .feat-col1 .post-excerpt {
+    font-size: 16px;
+  }
+  .featured-style4 .feat-col1 article .md-6 {
+    padding: 0;
+  }
 }
 .blog-section-title {
   background: #fafafa;
@@ -2115,6 +2255,31 @@ aside:nth-child(odd) {
 }
 #colophon a {
   color: #22AAA1;
+  text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  #colophon.menu-enabled .copyright {
+    text-align: left;
+    padding-left: 0;
+  }
+  #colophon.menu-enabled .short-menu {
+    float: right;
+    padding-right: 0;
+  }
+  #colophon.menu-enabled .md-6:nth-child(2) {
+    padding-right: 0;
+  }
+}
+#colophon.menu-enabled .short-menu ul ul {
+  display: none;
+}
+#colophon.menu-enabled .short-menu li a {
+  text-decoration: none;
+  color: #444;
+  border-bottom: solid 1px dotted;
+  display: inline-block;
+}
+#colophon.menu-enabled .short-menu li a:hover {
   text-decoration: underline;
 }
 #menu {
