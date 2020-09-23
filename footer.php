@@ -16,18 +16,18 @@ get_sidebar( 'footer' );
 $footer_menu = get_theme_mod( 'flaxseedpro_footer_activation_status' );
 if ( $footer_menu ) {
 	// If footer option is set then check if footer menu is active and a menu is assigned to footer-menu.
-	if ( 'active' === $footer_menu && has_nav_menu( 'footer-menu' ) ) {
+	if ( 'active' === $footer_menu && has_nav_menu( 'footer' ) ) {
 		// footer_menu is active and footer-menu is assigned a menu from Menus section then show copyright and footer menu.
 		?>
 		<footer id="colophon" class="site-footer title-font menu-enabled" role="contentinfo">
 			<div class="container">
 				<div class="site-info">
 					<div class="md-6 copyright">
-						<?php  echo esc_textarea(get_theme_mod('flaxseedpro_footer_copyright_text')); ?>
+						<?php  echo esc_textarea(get_theme_mod('flaxseedpro_footer_copyright_text', __( 'Powered by WordPress', 'flaxseed-pro' ))); ?>
 					</div>
 					<div class="md-6">
 						<div class="short-menu">
-							<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+							<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
 						</div>
 					</div>
 				</div><!-- .site-info -->
@@ -40,7 +40,7 @@ if ( $footer_menu ) {
 		<footer id="colophon" class="site-footer title-font" role="contentinfo">
 			<div class="container">
 				<div class="site-info">
-					<?php  echo esc_textarea(get_theme_mod( 'flaxseedpro_footer_copyright_text')); ?>
+					<?php  echo esc_textarea(get_theme_mod( 'flaxseedpro_footer_copyright_text', __( 'Powered by WordPress', 'flaxseed-pro' ))); ?>
 				</div><!-- .site-info -->
 			</div>
 		</footer><!-- #colophon -->

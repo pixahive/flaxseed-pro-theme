@@ -54,7 +54,7 @@ if ( ! function_exists( 'flaxseedpro_setup' ) ) :
 				'primary' => __( 'Primary Menu', 'flaxseed-pro' ),
 				'top'     => __( 'Top Menu', 'flaxseed-pro' ),
 				'mobile'  => __( 'Mobile Menu', 'flaxseed-pro' ),
-				'footer-menu', __('Footer Menu','flaxseed-pro')
+				'footer'  => __('Footer Menu','flaxseed-pro')
 			)
 		);
 

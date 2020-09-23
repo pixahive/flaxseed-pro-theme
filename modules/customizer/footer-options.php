@@ -29,7 +29,7 @@ function flaxseedpro_customize_register_footer_options( $wp_customize ) {
 		'flaxseedpro_footer_copyright_text',
 		array(
 			'sanitize_callback' => 'flaxseedpro_sanitize_copyright_text',
-			'default'           => 'Copyright @ Flaxseed Pro',
+			'default'           => '',
 		)
 	);
 	$footer_options = array(// Redefined in Sanitization Function.

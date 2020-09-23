@@ -62,6 +62,10 @@ Header Image appears only on static front page. Go to your Customizer > Settings
 * Improved Blog Layouts
 * Added Support for Google Fonts
 
+= 1.1.2 = 
+* Removed Default Copyright Message
+* Fixed Bug with Footer Menu
+
 
 == Credits ==
 
